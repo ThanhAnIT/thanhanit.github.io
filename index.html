@@ -4,6 +4,15 @@
   <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <script type="text/javascript">
+            function Copy() 
+            {
+                //var Url = document.createElement("textarea");
+                urlCopied.innerHTML = window.location.href;
+                //Copied = Url.createTextRange();
+                //Copied.execCommand("Copy");
+            }
+        </script>
   <style>
     body {
       display: flex;
@@ -37,5 +46,12 @@
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
   <script src="script.js"></script>
+  <div>
+
+        <input type="button" value="Copy Url" onclick="Copy();" />
+        <br />
+	</div>
+  
+  
 </body>
 </html>
