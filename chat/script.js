@@ -8,9 +8,16 @@ function randomEmoji() {
   var randomIndex = Math.floor(Math.random() * possibleEmojis.length);
   return possibleEmojis[randomIndex];
 }
-
+const possiblename = [
+  'A','B',
+  
+];
+function randomname () {
+  var randomIndex1 = Math.floor(Math.random() * possiblename.length);
+  return possiblename[randomIndex1];
+}
 const emoji = randomEmoji();
-const name = prompt("What's your name?");
+const name = randomname();
 
 // Generate random chat hash if needed
 if (!location.hash) {
