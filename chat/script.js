@@ -9,7 +9,7 @@ function randomEmoji() {
   return possibleEmojis[randomIndex];
 }
 const possiblename = [
-  'A','B',
+  ' ',' ',
   
 ];
 function randomname () {
