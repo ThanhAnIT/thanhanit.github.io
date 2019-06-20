@@ -77,7 +77,9 @@ function sendSignalingMessage(message) {
 function startWebRTC(isOfferer) {
   console.log('Starting WebRTC in as', isOfferer ? 'offerer' : 'waiter');
   pc = new RTCPeerConnection(configuration);
-
+	  if (isOfferer === 'waiter') {
+    insertMessageToDOM({content: 'Đang chờ ...'});
+  }
   // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
   // message to the other peer through the signaling server
   pc.onicecandidate = event => {
@@ -149,7 +151,7 @@ function setupDataChannel() {
 function checkDataChannelState() {
   console.log('WebRTC channel state is:', dataChannel.readyState);
   if (dataChannel.readyState === 'open') {
-    insertMessageToDOM({content: 'WebRTC data channel is now open'});
+    insertMessageToDOM({content: 'Đã kết nối chat !'});
   }
 }
 
