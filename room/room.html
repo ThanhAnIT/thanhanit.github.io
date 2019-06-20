@@ -16,7 +16,7 @@
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     }
     video {
-	    max-width: calc(40% - 80px);
+	    max-width: calc(30% - 60px);
       margin: 0 50px;
       box-sizing: border-box;
       border-radius: 2px;
@@ -40,11 +40,11 @@
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
   <script src="script.js"></script>
-  <iframe id="myIframe"	 style="height:594px;width:400px;"></iframe>
+  <iframe id="myIframe"	 style="height:486px;width:370px;"></iframe>
   <script type="text/javascript">
 
 		var string = window.location.href;
-		var par = string.slice(42);
+	var par = string.slice(42);
 		document.getElementById('myIframe').src="https://thanhanit.github.io/chat/"+par;
 </script>
 
