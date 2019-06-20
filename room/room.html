@@ -34,18 +34,18 @@
   </style>
   
 </head>
-<body	background = '10.jpg'>
+<body	onLoad="init()"	background = '10.jpg'>
 <script src="pleaserotate.js"></script>
   <div class="copy">Share your ID Room to start a video call</div>
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
   <script src="script.js"></script>
-<script type="text/javascript">
-var string = window.location.href;
-var idroom = string.slice(33);
+  <iframe id="myIframe"	 style="height:594px;width:400px;"></iframe>
+  <script type="text/javascript">
+		var string = window.location.href;
+		var par = string.slice(33);
+		document.getElementById('myIframe').src="https://thanhanit.github.io/chat/"+par;
 </script>
-<iframe src="https://thanhanit.github.io/chat/+idroom.value+"style="height:400px;width:594px;"></iframe>
-
 
   
   
