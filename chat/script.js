@@ -9,21 +9,8 @@ function randomEmoji() {
   return possibleEmojis[randomIndex];
 }
 
-
-function GetURLParameter(sParam) {
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) {
-            return sParameterName[1];
-        }
-    }
-}​
-const name = GetURLParameter('id');
-
 const emoji = randomEmoji();
-
+const name = prompt("What's your name?");
 
 // Generate random chat hash if needed
 if (!location.hash) {
