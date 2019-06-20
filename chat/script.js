@@ -20,7 +20,7 @@ function GetURLParameter(sParam) {
         }
     }
 }​
-var name = GetURLParameter('id');
+const name = GetURLParameter('id');
 
 const emoji = randomEmoji();
 
