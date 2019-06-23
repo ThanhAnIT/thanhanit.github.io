@@ -16,13 +16,28 @@
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     }
     video {
-	    max-width: calc(30% - 60px);
-      margin: 0 50px;
-      box-sizing: border-box;
-      border-radius: 2px;
-      padding: 0;
-      box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+        width: 35%; 
+        height: 49%; 
+        margin: 0 50px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 0;
+        border: 3px solid #90ee90;
+        box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
     }
+      
+
+ #localVideo {
+          position: absolute;
+          top: 19%;
+          left: 3.1%;
+      }
+      
+        #remoteVideo {
+          position: absolute;
+          top: 19%;
+          left: 50%;
+      }
     .copy {
       position: fixed;
       top: 10px;
@@ -31,6 +46,14 @@
       font-size: 16px;
       color: rgba(0, 241, 255, 1);
     }
+	 #bottom { 
+                position:absolute;                  
+                bottom:0;  
+				right:0;
+                                      
+            } 
+	
+
   </style>
   
 </head>
@@ -40,16 +63,16 @@
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
   <script src="script.js"></script>
-  <iframe id="myIframe"	 style="height:486px;width:370px;"></iframe>
-  <script type="text/javascript">
 
+<div id="bottom" style="width: 54%"><iframe id="myIframe"	width="100%" height="193" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />
+
+<script type="text/javascript">
 		var string = window.location.href;
 	var par = string.slice(42);
 		document.getElementById('myIframe').src="https://thanhanit.github.io/chat/"+par;
 </script>
 
   
-  
-  
+
 </body>
 </html>
