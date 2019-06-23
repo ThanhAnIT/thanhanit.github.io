@@ -22,7 +22,7 @@
         box-sizing: border-box;
         border-radius: 20px;
         padding: 0;
-        border: 3px solid #228ece78;
+        border: 3px solid #228eceb0;
         box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
     }
       
@@ -53,7 +53,63 @@
                                       
             } 
 	
-
+	    
+      .btn {
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-color: transparent;
+          border: 2px solid #228eceb0;
+          border-radius: 2em;
+          color: #228eceb0;
+          cursor: pointer;
+          display: flex;
+          align-self: center;  
+          font-weight: 900;
+          font-size: 1.2em;
+          line-height: 1;
+          font-family: 'Comfortaa', sans-serif;
+          margin: 20px;
+          padding: 0.3em 2.7em;
+          text-decoration: none;
+          text-align: center;
+          font-family: 'Comfortaa', sans-serif;
+          position: absolute;
+          z-index: 999;
+          text-decoration: none;
+          
+      }
+      
+      .btn:hover, .btn:focus {
+          color: #228eceb0;
+          outline: 0;
+          text-decoration: none;
+      } 
+      
+      .fourth {
+          border-color: #228eceb0;
+          color: #ffffff;
+          background-image: linear-gradient(120deg, #228eceb0 50%, transparent 50%);
+          background-position: 100%;
+          background-size: 400%;
+          transition: background 600ms ease-in-out;
+      }
+      
+      .fourth:hover {
+          background-position: 0;
+          color: #f8f7ff;
+      }    
+      
+      .posleft {
+          top: 75%;
+          left: 16.2%;
+      }
+      
+      .posright {
+          top: 75%;
+          left: 62.9%;
+      }
   </style>
   
 </head>
@@ -67,13 +123,45 @@
 <div id="bottom" style="width:50%"><iframe id="myIframe" width="95%" heith frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="
     height: 191px;
 "></iframe></div><br />
+<script type="text/javascript">
+function copyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.style.position = 'fixed';
+  textArea.style.top = 0;
+  textArea.style.left = 0;
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+  textArea.style.padding = 0;
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+  textArea.style.background = 'transparent';
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+  document.body.removeChild(textArea);
+}
+function CopyLink() {
+  copyTextToClipboard(location.href);
+}
+
+var we = CopyLink();
+	var par = we.slice(42);
+</script>
+
+<button class="btn fourth posleft" onclick="CopyLink()">Click me to copy link </button>
 
 <script type="text/javascript">
 		var string = window.location.href;
 	var par = string.slice(42);
 		document.getElementById('myIframe').src="https://thanhanit.github.io/chat/"+par;
 </script>
-  
-
 </body>
 </html>
