@@ -105,10 +105,9 @@
           top: 75%;
           left: 16.2%;
       }
-      
-      .posright {
-          top: 75%;
-          left: 62.9%;
+	 .posleft1 {
+          top: 83%;
+          left: 16.2%;
       }
   </style>
   
@@ -155,9 +154,18 @@ function CopyLink() {
 var we = CopyLink();
 	var par = we.slice(42);
 </script>
-
-<button class="btn fourth posleft" onclick="CopyLink()">Click me to copy link </button>
-
+<script>
+function myFunction() {
+  var x = document.getElementById("bottom");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<button class="btn fourth posleft" onclick="CopyLink()">CopyLink</button>
+<button class= "btn fourth posleft1"onclick="myFunction()">HideChat</button>
 <script type="text/javascript">
 		var string = window.location.href;
 	var par = string.slice(42);
