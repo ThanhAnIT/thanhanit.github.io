@@ -9,7 +9,7 @@
         onHide: function(){},
         onShow: function(){},
         forcePortrait: false,
-        message: "Vui lòng xoay màn hình để có trải nghiệm tốt nhất",
+        message: "Vui lòng xoay màn hình",
         subMessage: "Hoặc ấn vào đây để tiếp tục",
         allowClickBypass: true,
         onlyMobile: true,
